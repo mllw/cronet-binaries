@@ -151,7 +151,7 @@ jobs:
           tar cJf ${{ env.BUNDLE }}.tar.xz ${{ env.BUNDLE }}
           openssl sha256 ${{ env.BUNDLE }}.tar.xz >sha256sum.txt
           echo "SHA256SUM=$(cut -d' ' -f2 sha256sum.txt)" >>$GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BUNDLE }}.tar.xz binaries sha256 ${{ env.SHA256SUM }}
           path: src/sha256sum.txt
@@ -222,7 +222,7 @@ jobs:
           tar cJf ${{ env.BUNDLE }}.tar.xz ${{ env.BUNDLE }}
           openssl sha256 ${{ env.BUNDLE }}.tar.xz >sha256sum.txt
           echo "SHA256SUM=$(cut -d' ' -f2 sha256sum.txt)" >>$GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BUNDLE }}.tar.xz binaries sha256 ${{ env.SHA256SUM }}
           path: src/sha256sum.txt
@@ -282,7 +282,7 @@ jobs:
           7z a ${{ env.BUNDLE }}.zip ${{ env.BUNDLE }}
           openssl sha256 ${{ env.BUNDLE }}.zip >sha256sum.txt
           echo "SHA256SUM=$(cut -d' ' -f2 sha256sum.txt)" >>$GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BUNDLE }}.zip binaries sha256 ${{ env.SHA256SUM }}
           path: src/sha256sum.txt
@@ -331,7 +331,7 @@ jobs:
           tar cJf ${{ env.BUNDLE }}.tar.xz ${{ env.BUNDLE }}
           openssl sha256 ${{ env.BUNDLE }}.tar.xz >sha256sum.txt
           echo "SHA256SUM=$(cut -d' ' -f2 sha256sum.txt)" >>$GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BUNDLE }}.tar.xz binaries sha256 ${{ env.SHA256SUM }}
           path: src/sha256sum.txt
@@ -511,7 +511,7 @@ jobs:
           tar cJf ${{ env.BUNDLE }}.tar.xz ${{ env.BUNDLE }}
           openssl sha256 ${{ env.BUNDLE }}.tar.xz >sha256sum.txt
           echo "SHA256SUM=$(cut -d' ' -f2 sha256sum.txt)" >>$GITHUB_ENV
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BUNDLE }}.tar.xz binaries sha256 ${{ env.SHA256SUM }}
           path: src/sha256sum.txt
